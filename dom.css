@@ -1,0 +1,25 @@
+/* Cascading Style Sheets*/
+
+/*
+selector {
+	property: value;
+}
+
+p {
+	color: yellow;
+	font-family: "arial", sans-serif;
+	font-size: 1.2em;
+}
+*/
+/* Inheritance is a powerful feature of CSS. Like the DOM, CSS views the contents of a document as a node tree.*/
+/* Elements that are nested within the node tree will inherit the style properties of their parents.*/
+
+.special {
+	font-style: italic;
+}
+
+/*You can also target specific types of elements with this class:*/
+
+h2.special {
+	text-transform: uppercase;
+}

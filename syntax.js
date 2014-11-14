@@ -18,7 +18,7 @@ mood = "happy"; // "" is also OK
 mood = "don't ask"; // ' in "" is OK
 mood = 'don\' ask'; // you have to escaping like this
 mood = "don't \" "; // similar
-alert(mood);
+console.log(mood);
 
 // Numbers
 var price = 10.5; // float
@@ -28,12 +28,13 @@ var temperature = -10.9; // negative
 var sleeping = true;
 
 // Arrays
-var beatles = Array(5); 
-beatles = Array(); // or []
+var beatles = new Array(5); 
+beatles = new Array(); // or []
 beatles[0] = "John"; // index starts from 0
 
 beatles = Array("John", "Paul", "George");
 beatles = ["John", "Paul", "George"]; // this is also OK
+console.log(beatles.length);
 
 var mixture = ["John", 90, false];
 
@@ -56,14 +57,87 @@ new name, year and living properties. Ideally you don't want to be modifying the
 object. Instead, you should be using a generic Object.
 */
 
-// Objects
+// Operations
+var number = 1 + 3 * 5 - 6 / 5;
+console.log (number);
+var string = "I am feeling" + " happy " + 100; // join strings
+string += "%"; 
+
+// Conditional statements
+if (true) {
+
+} else {
+
+}
+
+// Comparison operators > < >= <= == !=
+
+var a = false;
+var b = "";
+if (a == b) {
+	console.log("a == b is true because empty string is regarded as false ");
+}
+
+if (a !== b) {
+	console.log(" a === b is not true when do the strict Comparison of both the value and type ");
+}
+
+// Logical operators && || ! 
+var num = 6;
+if (num > 5 && num < 10 || num == -1 || !(num ==0)) {};
+
+// Looping statements
+while (true) {
+	if(num < 100) {
+		num++;
+		continue;
+	}	
+	break;
+}
+
+do {
+
+} while (false);
+
+for (var i = mixture.length - 1; i >= 0; i--) {
+	console.log(mixture[i]);
+};
+
+// Functions
+
+function hello (argument) {
+	console.log("hello " + argument);
+	return "OK";
+};
+
+hello("Jacky");
+// build-in Functions alert()
+// http://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm
+var num = Math.round(num);
+console.log(num);
+var current_date = new Date();
+var today = current_date.getDay();
+console.log(today);
+
+// Variable scope: global or local
+// A global variable can be referenced from anywhere in the script.
+// A local variable exists only within the function in which it is declared. 
+// If you use var within a function, the variable will be treated as a local variable.
+// If you don’t use var, the variable will be treated as a global variable.
+
+// Objects, An object is a self-contained collection of data. This data comes in two forms: properties and methods
 var lennon = Object();
 lennon.name = "Jacky";
 lennon.age = 20;
 
 var lennon = {name:"Jacky", age:20}; // more compact curly-brace {} syntax
 
-// Operations
-
-
-
+/*
+Host objects
+Native objects aren’t the only kind of premade objects that you can use in your scripts. Another kind of
+object is supplied not by the JavaScript language itself, but by the environment in which it’s running. In
+the case of the Web, that environment is the web browser. Objects that are supplied by the web browser
+are called host objects.
+Host objects include Form, Image, and Element. These objects can be used to get information about
+forms, images, and form elements within a web page.
+*/
