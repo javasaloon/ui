@@ -32,5 +32,35 @@ dealing with these in this book.
 // Because attributes are always placed within opening tags, attribute nodes are always contained within element nodes.
 // Not all elements contain attributes, but all attributes are contained by elements.
 
+// Getting Elements by ID, tag name, and class name
+console.log (typeof document.getElementById("purchases")); // object
+console.log (typeof document.getElementsByTagName("li").length); // object 
+console.log (document.getElementsByTagName("li").length);
+console.log (document.getElementsByTagName("*").length); // wildcard symbol (the asterisk)
 
+var shopping = document.getElementById("purchases");
+var items = shopping.getElementsByTagName("*"); // apply to one element node object
+console.log (items.length);  
+
+// A welcome addition to the HTML5 DOM (http://www.whatwg.org/specs/web-apps/current-work/) is the getElementsByClassName method.
+var shopping = document.getElementById("purchases");
+var sales = shopping.getElementsByClassName("sale");
+console.log (sales.length);  
+
+// getAttribute/setAttribute
+// Unlike the other methods you’ve seen in this chapter, you can’t use getAttribute/setAttribute on the document object. 
+// It can be used on only an element node object.
+
+var paras = document.getElementsByTagName("p");
+for (var i=0; i< paras.length; i++) {
+	var title_text = paras[i].getAttribute("title");
+	if (title_text) { // if (something) is a shorthand way of writing if (something != null)
+		// The condition of the if statement will be true if something exists. It will be false if something doesn’t exist.
+		console.log(title_text);
+	}
+}
+
+var shopping = document.getElementById("purchases");
+shopping.setAttribute("title","a list of goods");
+console.log(shopping.getAttribute("title"));
 

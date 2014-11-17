@@ -14,6 +14,7 @@ p {
 /* Inheritance is a powerful feature of CSS. Like the DOM, CSS views the contents of a document as a node tree.*/
 /* Elements that are nested within the node tree will inherit the style properties of their parents.*/
 
+/*class*/
 .special {
 	font-style: italic;
 }
@@ -22,4 +23,16 @@ p {
 
 h2.special {
 	text-transform: uppercase;
+}
+
+/*The id attribute*/
+#purchases {
+	border: 1px solid white;
+	background-color: #333;
+	color: #ccc;
+	padding: 1em;
+}
+
+#purchases li {
+	font-weight: bold;
 }

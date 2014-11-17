@@ -3,12 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Example</title>
-	<style type="text/css" src="dom.css"></style>
+	<style>
+		body {
+		    background-color: linen;
+		}
+		h1 {
+		    color: maroon;
+		    margin-left: 40px;
+		} 
+	</style>
+	<link rel="stylesheet" type="text/css" href="dom.css">
 	
 </head>
 <body>
-	<p class="special">This paragraph has the special class</p>
+	<p class="special" title="this is title">This paragraph has the special class</p>
 	<h2 class="special">So does this headline</h2>
+
+	<ul id="purchases">
+		<li class="sale">cat</li>
+		<li class="sale">dot</li>
+		<li class="sale">duck</li>
+	</ul>
 
 	<script src = "syntax.js"></script>
 	<script src = "dom.js"></script>
