@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Example</title>
+<style>
+	p#example {
+		color: grey;
+		font: 12px 'Arial', sans-serif;
+	}
+</style>
+
+<script>
+	window.onload = function() {
+		var para = document.getElementById("example");
+		console.log("The font size is " + para.style.fontSize);
+		para.style.color = "black";
+		para.style.font = "2em 'Times',serif";
+	}
+</script>
+</head>
+<body>
+	<p id="example" style="color: grey; font-family: 'Arial',sans-serif;font-size: 1em;">
+		The style property only returns inline style information.
+		
+	</p>
+	<p>Just as you should never use the DOM to create important content, you also shouldn’t use the DOM to set the majority of
+styles for a document.</p>
+</body>
+</html>
